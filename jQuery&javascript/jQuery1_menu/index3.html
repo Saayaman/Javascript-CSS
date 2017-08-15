@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Menu Practice2</title>
+    <!-- <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous"> -->
+    <style>
+      p{display: none;}
+      button{
+       outline: 0;
+       background: blue;
+       border: 0;
+       color: white;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/105201bf0f.js"></script>
+    <script>
+
+    //slideToggle指定するだけで、出し入れできるよ！
+    //html は textを書く!という意味だよ！
+    var hidden;
+    $(document).ready(function(){
+        $("#clickme").click(function(){
+            $("p").slideToggle();
+            if (hidden == true) {
+              $("#clickme").html("click me!", function(hidden){
+                alert("Help me!");
+                $("i").addClass("fa-bars fa-database").removeClass("fa-database");
+              });
+            } else {
+              $("#clickme").html("hide me!", function(hidden){
+                $("i").addClass("fa-database fa-bars").removeClass("fa-bars");
+              });
+
+            }
+        });
+    });
+    </script>
+  </head>
+  <body>
+    <button id="clickme" type="button"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>Click Me!</button>
+    <p>Stop peeking!</p>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SAAYA'S ANIME</title>
+    <style type="text/css">
+
+    body{
+      background-color: #ff8a00;
+    }
+
+    .box-container{
+       width: 400px;
+       height: 400px;
+       top: 100px;
+       margin: auto;
+       position: relative;;
+     }
+
+    .box{
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.2);
+
+    }
+
+    .box1-anime{
+
+        transform: rotate(45deg);
+        -webkit-animation: box1 5s infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: box1 5s infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    .box2-anime{
+        transform: rotate(75deg);
+        animation: 5s infinite box2;
+    }
+
+    .box3-anime{
+        animation: box3 5s infinite;
+        transform: rotate(105deg);
+
+    }
+
+      @keyframes box1 {
+
+        0% {
+          transform: rotate(45deg);
+        }
+
+        50%{
+          transform: rotate(90deg);
+        }
+
+        100% {
+          transform: rotate(135deg);
+        }
+      }
+
+      @keyframes box2 {
+
+        0% {
+          transform: rotate(75deg);
+        }
+
+        25%{
+          transform: rotate(120deg);
+        }
+
+        50%{
+          transform: rotate(165deg);
+        }
+
+        75%{
+          transform: rotate(110deg);
+        }
+
+        100%{
+          transform: rotate(155deg);
+        }
+
+      }
+
+      @keyframes box3{
+        from{transform: rotate(105deg);}
+        to{transform: rotate(15deg);}
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="box-container">
+        <div class="box box1-anime">&nbsp;</div>
+        <div class="box box2-anime">&nbsp;</div>
+        <div class="box box3-anime">&nbsp;</div>
+    </div>
+  </body>
+</html>

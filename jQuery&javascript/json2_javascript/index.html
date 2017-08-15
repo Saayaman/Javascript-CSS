@@ -1,0 +1,60 @@
+
+<!--This version uses .eq() and .text() strings!-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+
+var obj = jQuery.parseJSON(text);
+
+
+$(document).ready(function(e){
+
+    var saayaData = $('.data');
+
+    //using "find" property is no the best practice in this case. I used it just for practice
+    saayaData.find('button').on('click', function(e){
+
+      e.preventDefault();
+        for (var i = 0; i < obj.employees.length; i++) {
+          console.log('complete!', obj.employees[i]);
+          $('.writehere').eq(i).text(obj.employees[i].firstName);
+          // Below is another way of writing.The results!
+          // $('.writehere').eq(i).append(obj.employees[i].firstName);
+
+      }
+    });
+
+});
+
+</script>
+
+
+<div class="data1 data"><a href="#">We are going to extract data.</a></div>
+<div class="data2 data">We will extract only the firstnames.</div>
+<div class="data"><button type="button">Writehere</button></div>
+
+<!--this is where the text appears-->
+<div class=writehere></div>
+<div class=writehere></div>
+<div class=writehere></div>
+
+
+</body>
+</html>

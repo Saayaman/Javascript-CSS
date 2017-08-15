@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script>
+
+$(document).ready(function(e){
+
+    var saayaData = $('.data');
+
+    //using "find" property is no the best practice in this case. I used it just for practice
+    saayaData.find('button').on('click', function(e){
+      e.preventDefault();
+      $('.writehere').load('info.json').firstName;
+      // $.getJSON("https://raw.githubusercontent.com/Saayaman/Playground/master/jQuery%26javascript/json1_jQuery/info.json", function(data){
+      //   console.log(data.employees.length);
+      //   for (var i = 0; i < data.employees.length; i++) {
+      //     console.log('complete!', data.employees[i]);
+      //     //$('.writehere').eq(i).text(data.employees[i].firstName);
+      //     // $('.writehere').eq(i).append(data.employees[i].firstName);
+      //
+      //   }
+      //
+      // })
+
+    });
+
+});
+
+</script>
+
+
+<div class="ddata"><a href="#">These are the List of People.</a></div>
+<div class="data">Their first names are...</div>
+<div class="data"><button type="button">Get Names</button></div>
+
+<!--this is where the text appears-->
+<div class=writehere></div>
+<div class=writehere></div>
+<div class=writehere></div>
+
+
+</body>
+</html>
