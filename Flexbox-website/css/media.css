@@ -1,0 +1,50 @@
+
+
+@media (max-width:1239px) {
+
+  .featBox{
+    flex: 1 360px;
+  }
+}
+
+
+@media screen and (min-width: 980px) /* Desktop */ {
+
+}
+
+@media screen  and (max-width: 979px) /* Tablet */ {
+  .nav ul{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  .nav ul{
+    display: none;
+  }
+
+  testimonial p{
+    width: auto;
+    margin: 0 40px;
+  }
+
+  .main-title h1{
+    max-width: 90%;
+  }
+
+  h2{
+    font-size: 1.6em;
+  }
+
+  .featBox{
+    margin:0;
+  }
+
+  .box{
+    flex: auto;
+  }
+
+  .footer-copyright{
+    display: block;
+  }
+}
