@@ -1,12 +1,10 @@
 
-
 @media (max-width:1239px) {
 
   .featBox{
     flex: 1 360px;
   }
 }
-
 
 @media screen and (min-width: 980px) /* Desktop */ {
 
@@ -19,6 +17,12 @@
 }
 
 @media screen and (max-width: 500px) /* Mobile */ {
+
+  .logo img{
+    display: block;
+    width: 90%;
+  }
+
   .nav ul{
     display: none;
   }
@@ -31,6 +35,8 @@
   .main-title h1{
     max-width: 90%;
   }
+
+
 
   h2{
     font-size: 1.6em;

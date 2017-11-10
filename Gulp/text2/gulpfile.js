@@ -24,6 +24,9 @@ gulp.task('serve', function() {
    }
  });
 
- gulp.watch(['*.html', 'css/*.css', 'js/*.js'], {cwd: 'app'}, reload);
- gulp.watch(['scss/*.scss'], {cwd: 'app'}, ['sass']);
+});
+
+gulp.task('default', ['serve'], function() {
+  gulp.watch(['*.html', 'css/*.css', 'js/*.js'], {cwd: 'app'}, reload);
+  gulp.watch(['scss/*.scss'], {cwd: 'app'}, ['sass']);
 });
