@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 
 // "pipe" means chain sth together
 gulp.task('sass', function(){
- return gulp.src('app/scss/main.scss')
+ return gulp.src('app/scss/**/*.scss')
      .pipe(sass())
      .pipe(gulp.dest('app/css'))
 });
@@ -28,5 +28,5 @@ gulp.task('serve', function() {
 
 gulp.task('default', ['serve'], function() {
   gulp.watch(['*.html', 'css/*.css', 'js/*.js'], {cwd: 'app'}, reload);
-  gulp.watch(['scss/*.scss'], {cwd: 'app'}, ['sass']);
+  gulp.watch(['scss/**/*.scss'], {cwd: 'app'}, ['sass']);
 });
